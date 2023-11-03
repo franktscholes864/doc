@@ -30,8 +30,8 @@ iv：`ad49ec7015d85664`
 ### 返回数据示例
 返回示例
 ```json
- {"code":0,"msg":"ok","time":1698995311,"data":null}
- {"code":1,"msg":"重复","time":1698995311,"data":null}
+ {"code":1,"msg":"ok","time":1698995311,"data":null}
+ {"code":0,"msg":"重复","time":1698995311,"data":null}
 ```
 入库失败的返回示例
 ```json
@@ -76,7 +76,7 @@ URL: `/index.php/api/sms/addsms`
 返回示例
 ```json
 {
-  "code": 0,
+  "code": 1,
   "msg": "ok",
   "time": 1698999518,
   "data": null
