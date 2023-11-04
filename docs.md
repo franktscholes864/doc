@@ -11,7 +11,7 @@ URL: `/index.php/api/sms/addphone`
 | enc | string | 是 | 加密内容 |
 ### ①示例POST加密前参数内容
 ```json
-{"phone":"22890909925"}
+{"phone":["22890909925","22890909926","22890909927"]}
 ```
 ### ②加密方式
 
@@ -31,11 +31,10 @@ iv：`ad49ec7015d85664`
 返回示例
 ```json
  {"code":1,"msg":"ok","time":1698995311,"data":null}
- {"code":0,"msg":"重复","time":1698995311,"data":null}
 ```
 入库失败的返回示例
 ```json
- {"code":1,"msg":"解密 failed","time":1698995311,"data":null}
+ {"code":0,"msg":"解密 failed","time":1698995311,"data":null}
 ```
 
 
