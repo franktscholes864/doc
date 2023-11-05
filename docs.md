@@ -20,12 +20,12 @@ iv：`ad49ec7015d85664`
 加密方式：`AES-256-CBC`
 
 对json加密后
-`B1k+QNmAHAUB6dRAYCA6SONYMhUmICq2LgAlffcgGBA=`
+`HepjLYteCxjKUkQMx89YKU1/+NKTx8ewJf7BUzzI/gaPrp5h2kbDUBwGw3rukPs6cP8H3/ac4G1F8j/EUY6AcA==`
 
 
 ### POST参数
 ```json
-{"enc":"B1k+QNmAHAUB6dRAYCA6SONYMhUmICq2LgAlffcgGBA="}
+{"enc":"HepjLYteCxjKUkQMx89YKU1/+NKTx8ewJf7BUzzI/gaPrp5h2kbDUBwGw3rukPs6cP8H3/ac4G1F8j/EUY6AcA=="}
 ```
 ### 返回数据示例
 返回示例
