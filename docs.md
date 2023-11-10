@@ -107,7 +107,7 @@ URL: `/index.php/api/sms/task`
 
 
 
-### 返回数据示例
+### 返回实时数据示例
 ```json
 {
     "code": 1,
@@ -122,7 +122,13 @@ URL: `/index.php/api/sms/task`
 ```
 
 ### 请求全部POST参数
+
 请求参数:   {}
+
+### 返回缓存10分钟数据示例
 ```json
 {"code":0,"msg":"同步缓存中","time":1699642213,"data":null}
+```
+```json
+{"code":1,"msg":"操作成功","time":1699642392,"data":[{"phone":"2349065969566","sell":0,"result":"blocked"},{"phone":"919354544482","sell":0,"result":"no_routes"},{"phone":"918978410765","sell":0,"result":"no_routes"},{"phone":"919580370211","sell":0,"result":"已注册"},{"phone":"918395050704","sell":0,"result":"已注册"},{"phone":"23408055201563","sell":0,"result":"已注册"},{"phone":"918855091169","sell":0,"result":"blocked"},{"phone":"918866565201","sell":0,"result":"blocked"},{"phone":"919776369359.","sell":0,"result":"blocked"},{"phone":"919332082750","sell":0,"result":"完成"},{"phone":"918297309999","sell":0,"result":"完成"},{"phone":"919026170459","sell":0,"result":"已注册"},{"phone":"919621121858","sell":0,"result":"已注册"}]
 ```
