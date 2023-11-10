@@ -90,7 +90,7 @@ URL: `/index.php/api/sms/addsms`
 
 URL: `/index.php/api/sms/task`
 
-类型： `GET`  
+类型： `post`  
 `Content-Type: application/json`  
 
 
@@ -101,29 +101,23 @@ URL: `/index.php/api/sms/task`
 
 
 
-### 请求链接
+### 请求POST参数
 
-GET`/index.php/api/sms/task??phone=22890909925`
+{"phone":["22890909925","22890909926","22890909921"]}
 
 
 
 ### 返回数据示例
 ```json
 {
-"code": 1,
-"msg": "操作成功",
-"time": 1699600232,
-"data": {
-"result": "封号"
-}
-}
-```
-```json
-{
-"code": 0,
-"msg": "暂无结果",
-"time": 1699600511,
-"data": null
+    "code": 1,
+    "msg": "操作成功",
+    "time": 1699607316,
+    "data": {
+        "22890909925": "封号",
+        "22890909926": "暂无结果",
+        "22890909921": "暂无结果"
+    }
 }
 ```
 
