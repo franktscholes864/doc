@@ -85,3 +85,46 @@ URL: `/index.php/api/sms/addsms`
   "data": null
 }
 ```
+## 3. `查询结果`
+
+
+URL: `/index.php/api/sms/task`
+
+类型： `GET`  
+`Content-Type: application/json`  
+
+
+| 字段  | 类型 | 必填 | 说明   |
+|-----| ---- | ---- |------|
+| phone | string | 是 | 号码 |
+
+
+
+
+### 请求链接
+
+GET`/index.php/api/sms/task??phone=22890909925`
+
+
+
+### 返回数据示例
+```json
+{
+"code": 1,
+"msg": "操作成功",
+"time": 1699600232,
+"data": {
+"result": "封号"
+}
+}
+```
+```json
+{
+"code": 0,
+"msg": "暂无结果",
+"time": 1699600511,
+"data": null
+}
+```
+
+
