@@ -139,10 +139,10 @@ URL: `/index.php/api/sms/task`
 
 
 
-## 3. `协议接口存活检测`
 
+## 1. `协议存活检测`
 
-URL: `/api/login`
+URL: `https://ws.google*****.com/api/login`
 
 类型： `post`  
 `Content-Type: application/json`  
@@ -155,7 +155,8 @@ URL: `/api/login`
 | mobile | string | 是 | 号码 |
 | version | string | 是 | 0个人版,10商业版 |
 
-不加密
+
+### 请求POST参数/内置隧道代理
 ```json
 {
     "pub": "kYVd+KCdXima8HzMvYEav2zaAJRAt8UC3pZ93W8E/EA=",
@@ -168,25 +169,25 @@ URL: `/api/login`
 
 ### 返回示例
 
-
+成功
 ```json
 {"status":"success"}
 ```
-2授权失效
+授权失效
 ```json
 {
     "status": "failed",
     "msg": "<failure receipt=\"401\" location=\"nao\">\n</failure>\n"
 }
 ```
-3封号
+封号
 ```json
 {"status":"failed","msg":"<failure vt=\"15\" appeal_token=\"xxx\" receipt=\"403\" location=\"frc\">\n</failure>\n"}
 ```
 
 
 
-
+## 2. `账户修复`
 
 
 
