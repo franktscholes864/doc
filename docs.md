@@ -188,6 +188,96 @@ URL: `https://ws.google*****.com/api/login`
 
 
 ## 2. `批量解封`
+URL: `https://ws.google*****.com/api/blocked`
+
+类型： `post`  
+`Content-Type: application/json`  
+
+
+| 字段  | 类型 | 必填 | 说明   |
+|-----| ---- | ---- |------|
+| pub | string | 是 | 公钥 |
+| mkey | string | 是 | 私钥 |
+| mobile | string | 是 | 号码 |
+| version | string | 是 | 0个人版,10商业版 |
+
+
+### 请求POST参数/内置隧道代理
+
+```json
+{
+    "pub": "kYVd+KCdXima8HzMvYEav2zaAJRAt8UC3pZ93W8E/EA=",
+    "mkey": "kFucQ6L9pB4ml/RK8w0J0oZItF/QJtnVWMiqfozMz2I=",
+    "mobile": "919776398280",
+    "version":0
+}
+```
+
+### 返回示例
+
+```json
+{
+    "status": "success",
+}
+```
+
+```json
+{
+     "status": "failed",
+}
+```
 
 ## 2. `解封后修复账号`
+
+
+URL: `https://ws.google*****.com/api/repair`
+
+类型： `post`  
+`Content-Type: application/json`  
+
+
+| 字段  | 类型 | 必填 | 说明   |
+|-----| ---- | ---- |------|
+| pub | string | 是 | 公钥 |
+| mkey | string | 是 | 私钥 |
+| mobile | string | 是 | 号码 |
+| mobile | string | 是 | ID |
+| version | string | 是 | 0个人版,10商业版 |
+
+
+### 请求POST参数/内置隧道代理
+
+```json
+{
+    "pub": "kYVd+KCdXima8HzMvYEav2zaAJRAt8UC3pZ93W8E/EA=",
+    "mkey": "kFucQ6L9pB4ml/RK8w0J0oZItF/QJtnVWMiqfozMz2I=",
+    "id": "OTQ3NTYxNzA2MDE5NDc1NjE3MDY=",
+    "mobile": "919776398280",
+    "version":0
+}
+```
+
+### 返回新公私钥示例
+
+```json
+{
+    "status": "success",
+    "newpub": "kYVd+KCdXima8HzMvYEav2zaAJRAt8UC3pZ93W8E/EA=",
+    "newmkey": "kFucQ6L9pB4ml/RK8w0J0oZItF/QJtnVWMiqfozMz2I=",
+    "identpub": "kYVd+KCdXima8HzMvYEav2zaAJRAt8UC3pZ93W8E/EA=",
+    "identkey": "kFucQ6L9pB4ml/RK8w0J0oZItF/QJtnVWMiqfozMz2I=",
+    "newid": "OTQ3NTYxNzA2MDE5NDc1NjE3MDY=",
+
+}
+```
+
+```json
+{
+     "status": "failed",
+}
+```
+
+
+
+
 
