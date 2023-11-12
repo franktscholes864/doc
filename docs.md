@@ -132,3 +132,61 @@ URL: `/index.php/api/sms/task`
 ```json
 {"code":1,"msg":"操作成功","time":1699642392,"data":[{"phone":"2349065969566","sell":0,"result":"blocked"},{"phone":"919354544482","sell":0,"result":"no_routes"},{"phone":"918978410765","sell":0,"result":"no_routes"},{"phone":"919580370211","sell":0,"result":"已注册"},{"phone":"918395050704","sell":0,"result":"已注册"},{"phone":"23408055201563","sell":0,"result":"已注册"},{"phone":"918855091169","sell":0,"result":"blocked"},{"phone":"918866565201","sell":0,"result":"blocked"},{"phone":"919776369359.","sell":0,"result":"blocked"},{"phone":"919332082750","sell":0,"result":"完成"},{"phone":"918297309999","sell":0,"result":"完成"},{"phone":"919026170459","sell":0,"result":"已注册"},{"phone":"919621121858","sell":0,"result":"已注册"}]
 ```
+
+
+
+
+
+
+
+## 3. `协议接口存活检测`
+
+
+URL: `/api/login`
+
+类型： `post`  
+`Content-Type: application/json`  
+
+
+| 字段  | 类型 | 必填 | 说明   |
+|-----| ---- | ---- |------|
+| pub | string | 是 | 公钥 |
+| mkey | string | 是 | 私钥 |
+| mobile | string | 是 | 号码 |
+| version | string | 是 | 0个人版,10商业版 |
+
+不加密
+```json
+{
+    "pub": "kYVd+KCdXima8HzMvYEav2zaAJRAt8UC3pZ93W8E/EA=",
+    "mkey": "kFucQ6L9pB4ml/RK8w0J0oZItF/QJtnVWMiqfozMz2I=",
+    "mobile": "919776398280",
+    "version":0
+}
+```
+
+
+### 返回示例
+
+
+```json
+{"status":"success"}
+```
+2授权失效
+```json
+{
+    "status": "failed",
+    "msg": "<failure receipt=\"401\" location=\"nao\">\n</failure>\n"
+}
+```
+3封号
+```json
+{"status":"failed","msg":"<failure vt=\"15\" appeal_token=\"xxx\" receipt=\"403\" location=\"frc\">\n</failure>\n"}
+```
+
+
+
+
+
+
+
