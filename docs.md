@@ -9,13 +9,14 @@ URL: `/index.php/api/sms/addphone`
 | 字段  | 类型 | 必填 | 说明   |
 |-----| ---- | ---- |------|
 | enc | string | 是 | 加密内容 |
+| type | string | 是 | 项目类型 |
 ### ①示例POST加密前多个参数内容
 ```json
-{"phone":["22890909925","22890909926","22890909927"]}
+{"phone":["22890909925","22890909926","22890909927"],"type":"ws"}
 ```
 ### ①示例POST加密前单个参数内容
 ```json
-{"phone":["22890909925"]}
+{"phone":["22890909925"],"type":"ws"}
 ```
 ### ②加密方式
 
@@ -24,12 +25,12 @@ iv：`ad49ec7015d85664`
 加密方式：`AES-256-CBC`
 
 对json加密后
-`HepjLYteCxjKUkQMx89YKU1/+NKTx8ewJf7BUzzI/gaPrp5h2kbDUBwGw3rukPs6cP8H3/ac4G1F8j/EUY6AcA==`
+`HepjLYteCxjKUkQMx89YKU1/+NKTx8ewJf7BUzzI/gaPrp5h2kbDUBwGw3rukPs6KD89wyn439WJ+4v5K3xe5rN1omJ8ukvleKixcG+FUss=`
 
 
 ### POST参数
 ```json
-{"enc":"HepjLYteCxjKUkQMx89YKU1/+NKTx8ewJf7BUzzI/gaPrp5h2kbDUBwGw3rukPs6cP8H3/ac4G1F8j/EUY6AcA=="}
+{"enc":"HepjLYteCxjKUkQMx89YKU1/+NKTx8ewJf7BUzzI/gaPrp5h2kbDUBwGw3rukPs6KD89wyn439WJ+4v5K3xe5rN1omJ8ukvleKixcG+FUss="}
 ```
 ### 返回数据示例
 返回示例
@@ -63,16 +64,17 @@ URL: `/index.php/api/sms/addsms`
 | phone | string | 是  | 号码   |
 | content | text   | 是  | 短信内容 |
 | send | string   | 可选 | 发送号码 |
+| type | string   | 可选 | 项目类型 |
 
 ```json
-{"phone":"22890909925","content":"you code 123456","send":"10086"}
+{"phone":"22890909925","content":"you code 123456","send":"10086","type":"ws"}
 ```
 ### 加密方式相同
-加密后结果`T7yBhLEFCE7uXOzi3WPrMJ/xJMrx5V4HrofJ8HkIsu8DVQbQDtFUO4JT7Eht5RUHx08ibj3WPY4ygE0hPpra5POAy+QjyrJIyOzskeEFNTk=`
+加密后结果`T7yBhLEFCE7uXOzi3WPrMJ/xJMrx5V4HrofJ8HkIsu8DVQbQDtFUO4JT7Eht5RUHx08ibj3WPY4ygE0hPpra5EeLuySwq577putCNLjEpVs=`
 
 ### POST参数
 ```json
-{"enc":"T7yBhLEFCE7uXOzi3WPrMJ/xJMrx5V4HrofJ8HkIsu8DVQbQDtFUO4JT7Eht5RUHx08ibj3WPY4ygE0hPpra5POAy+QjyrJIyOzskeEFNTk="}
+{"enc":"T7yBhLEFCE7uXOzi3WPrMJ/xJMrx5V4HrofJ8HkIsu8DVQbQDtFUO4JT7Eht5RUHx08ibj3WPY4ygE0hPpra5EeLuySwq577putCNLjEpVs="}
 ```
 
 ### 返回数据示例
